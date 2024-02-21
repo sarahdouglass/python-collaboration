@@ -9,21 +9,25 @@ while ans != "E":
         tasks.update({temp:False})
     elif(ans == "B"):
         keys = tasks.keys()
+        vals = tasks.values()
         print("Tasks:")
-        for i in range(len(keys)):
-            if(tasks.get(keys[i])): print(i,". ", keys[i], "is completed.")
-            else:print(i,". ", keys[i], "is incomplete.")
+        count = 1
+        for task,completed in tasks.items():
+            if completed: status = "complete"
+            else: status = "incomplete"
+            print(f"{count}. {task} is {status}")
+            count += 1
     elif(ans == "C"):
         keys = tasks.keys()
         for i in range(len(keys)):
-            print((i+1),". ", keys[i])
+            print(i,". ", keys[i])
         print("Enter number for completed task.")
         num = int(input())
         tasks.update(keys[num + 1])
     elif(ans == "D"):
         keys = tasks.keys()
         for i in range(len(keys)):
-            print((i+1),". ", keys[i])
+            print(i,". ", keys[i])
         print("Enter number for deleted task.")
         num = int(input())
         tasks.pop(keys[num+1])
