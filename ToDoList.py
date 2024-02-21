@@ -1,3 +1,4 @@
+#Programmed Task List (allows user to add, complete, delete, and view tasks)
 tasks = {}  #opening an empty dictionary
 
 #prompting user to follow directions and input choice
