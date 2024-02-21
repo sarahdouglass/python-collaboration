@@ -1,0 +1,1 @@
+This project is meant to further our understanding of GitHub by forcing us to create a new repository online and add another person as a collaborater. We are then instructed to manually add a README.md file and then follow more instructions meant to test our skills and knowledge learned in the classroom setting.
