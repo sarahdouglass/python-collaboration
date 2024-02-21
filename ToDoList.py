@@ -8,8 +8,6 @@ while ans != "E":
         temp = input("Enter a new task:")
         tasks.update({temp:False})
     elif(ans == "B"):
-        keys = tasks.keys()
-        vals = tasks.values()
         print("Tasks:")
         count = 1
         for task,completed in tasks.items():
@@ -18,19 +16,13 @@ while ans != "E":
             print(f"{count}. {task} is {status}")
             count += 1
     elif(ans == "C"):
-        keys = tasks.keys()
-        for i in range(len(keys)):
-            print(i,". ", keys[i])
-        print("Enter number for completed task.")
-        num = int(input())
-        tasks.update(keys[num + 1])
+        print("Enter completed task.")
+        temp = input()
+        tasks.update(temp,True)
     elif(ans == "D"):
-        keys = tasks.keys()
-        for i in range(len(keys)):
-            print(i,". ", keys[i])
-        print("Enter number for deleted task.")
-        num = int(input())
-        tasks.pop(keys[num+1])
+        print("Enter deleted task.")
+        temp = input()
+        tasks.pop(temp)
     
     print("Enter one of the following commands:\n[A]Add new tasks.\n[B]View all tasks.\n[C]Complete task.\n[D]Delete tasks.\n[E]End program.")
     ans = input()
